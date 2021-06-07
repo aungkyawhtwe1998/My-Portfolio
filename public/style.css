@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,500;1,200;1,800;1,900&display=swap');
+:root {
+    --dark: #1a2639;
+    --gray: #3e4a61;
+    --primary: #e66724;
+    --secondary: #009278;
+    --light: #d9dad7;
+}
+
+* {
+    font-family: 'Exo', sans-serif;
+}
+
+.my-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.text-title {
+    color: var(--primary) !important;
+}
+
+.my-pp {
+    border: 5px solid var(--secondary);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.my-pp:hover {
+    transform: scale(0.95);
+    background-color: rgba(255, 255, 255, .1) !important;
+    ;
+}
+
+.my-profile {
+    background-size: contain;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+body {
+    background-color: var(--dark) !important;
+}
+
+body::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#e66724, #035747);
+    clip-path: circle(40% at right 70%);
+}
+
+body::after {
+    z-index: -2;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#035747, #e66724);
+    clip-path: circle(20% at 10% 10%);
+}
+
+.divider {
+    width: 200px;
+    border: 3px solid var(--secondary);
+    border-radius: 20px;
+}
+
+.divider-col {
+    border-radius: 20px;
+    border: 3px solid var(--secondary);
+    height: 50px;
+    background-color: var(--secondary);
+}
+
+.rectangle {
+    border-radius: 20px;
+    border: 5px solid var(--primary);
+}
+
+.my-card {
+    margin: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.322);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, .1) !important;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    /* border-top: 1px solid rgba(255, 255, 255, .5); */
+    /* border-left: 1px solid rgba(255, 255, 255, .5); */
+    backdrop-filter: blur(50%);
+    transition: 0.4s;
+}
+
+.my-card:hover {
+    transform: scale(0.95);
+}
+
+.site-nav .menu-icon {
+    color: var(--primary);
+}
+
+.navbar-toggler:active {
+    outline: none !important;
+}
+
+.navbar-nav {
+    padding-top: 10px !important;
+}
+
+.nav-link {
+    text-align: center;
+    justify-content: center;
+    width: 80px;
+    height: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px !important;
+    border-radius: 10em;
+    color: var(--secondary) !important;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.nav-link:hover {
+    border: 3px solid var(--primary);
+}
+
+.nav-link.current-section {
+    border: 2px solid var(--primary);
+    border-radius: 10em;
+    padding: 10px;
+}
+
+.site-nav-scroll .nav-link.current-section {
+    border: 2px solid var(--primary);
+    border-radius: 10em;
+    padding: 10px;
+}
+
+.site-nav {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(27, 27, 27, 0.1) !important;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.322);
+    backdrop-filter: blur(100%);
+}
+
+.site-nav-scroll {
+    width: 100%;
+    position: fixed !important;
+    background-color: var(--gray) !important;
+    box-shadow: 0 0 5px #00000020;
+    animation: toShow 1s linear;
+}
+
+.site-nav-scroll .nav-link {
+    color: var(--secondary) !important;
+}
+
+.site-nav-scroll .menu-icon {
+    color: var(--secondary);
+}
+
+.scroll-to-next {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    /*border: 1px solid black;*/
+    display: flex;
+    background: rgba(97, 96, 96, 0.384) !important;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, .5);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots li {
+    margin: 5px;
+    width: 10px !important;
+    height: 10px !important;
+    background-color: transparent;
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active {
+    width: 15px !important;
+    height: 15px !important;
+    background-color: var(--secondary) !important;
+}
+
+.ani-delay-1 {
+    animation-delay: 0.5s;
+}
+
+.ani-delay-2 {
+    animation-delay: 1s;
+}
+
+.ani-delay-3 {
+    animation-delay: 1.5s;
+}
+
+.ani-delay-4 {
+    animation-delay: 2s;
+}
+
+.ani-delay-5 {
+    animation-delay: 2.5s;
+}
+
+.social-v {
+    position: absolute;
+    bottom: 20px;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socaial-icon a {
+    transition: 0.5s;
+}
+
+.social-icon a:hover {
+    transform: scale(1.5);
+}
+
+.social-v a {
+    display: block;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+
+.social-v a:hover {
+    transform: scale(1.5);
+}
+
+.circle {
+    display: flex;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: var(--gray);
+    align-items: center;
+    justify-content: center;
+}
+
+.my-input {
+    outline: none;
+    text-decoration: none;
+    color: var(--light);
+    font-weight: bold;
+    font-size: 20px;
+    background-color: var(--dark);
+    border: 3px solid var(--secondary);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 576px) {
+    .social-v {
+        margin: 0;
+        left: auto;
+        right: 30px;
+        bottom: 230px !important;
+    }
+    .site-nav {
+        z-index: 100;
+        position: fixed !important;
+        margin-bottom: 5px;
+        background-color: #497c75b0 !important;
+        box-shadow: 0 0 5px #00000015;
+        border-radius: 0px 0px 20px 20px;
+    }
+    .nav-link {
+        width: 200px !important;
+        height: 50px !important;
+        background-color: var(--dark);
+        padding-top: 5px;
+        margin: 5px;
+    }
+    .navbar-nav {
+        padding: 20px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .social-v {
+        margin: 0;
+        left: auto;
+        right: 40px;
+        bottom: 400px;
+    }
+    .site-nav {
+        z-index: 100;
+        position: fixed !important;
+        margin-bottom: 5px;
+        background-color: #497c75b0 !important;
+        box-shadow: 0 0 5px #00000015;
+        border-radius: 0px 0px 20px 20px;
+    }
+    .nav-link {
+        text-align: center;
+        height: 50px;
+        width: 400px;
+        background-color: var(--dark);
+    }
+    .navbar-nav {
+        padding: 20px;
+        align-items: center;
+    }
+}
